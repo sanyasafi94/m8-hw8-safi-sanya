@@ -52,22 +52,22 @@ header a:hover{
 main a {
   color: var(--danger-color);
   background-color: transparent;
-  background-image: linear-gradient(to bottom, var(--danger-color), var(--danger-color));
-  background-size: 100% 0%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  transition: background-size 0.3s ease, color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; 
+  padding-bottom: 0; 
 }
 
 main a:hover {
   color: white;
-  background-size: 100% 100%;
+  background-color: var(--danger-color);
+  padding-bottom: 0%;
+  font-size: 24px;
 }
 
 main > article, nav{
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
+  
 }
 
 nav {
