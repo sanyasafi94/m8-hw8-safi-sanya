@@ -51,8 +51,18 @@ header a:hover{
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, var(--danger-color), var(--danger-color));
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: background-size 0.3s ease, color 0.3s ease;
 }
-/* end article link transitions */
+
+main a:hover {
+  color: white;
+  background-size: 100% 100%;
+}
 
 main > article, nav{
   max-width: 1200px;
@@ -106,11 +116,13 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
+  animation: spin 5s ease;
+  animation-iteration-count: infinite;
 }
 
-section.hero > button:hover {
-  transform: rotate(360deg); 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 main article {
