@@ -42,6 +42,10 @@ header a {
 }
 /* end header link animations */
 
+header a:hover{
+  color: red
+}
+
 /* article link transitions */
 main a {
   color: var(--danger-color);
